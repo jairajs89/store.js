@@ -19,7 +19,7 @@
  * THE SOFTWARE.
  */
 
-;(function(){
+var store = (function(window){
 	var store = {},
 		win = window,
 		doc = win.document,
@@ -190,7 +190,5 @@
 	}
 	store.enabled = !store.disabled
 	
-	if (typeof module != 'undefined' && typeof module != 'function') { module.exports = store }
-	else if (typeof define === 'function' && define.amd) { define(store) }
-	else { this.store = store }
-})();
+	return store;
+}(window);
