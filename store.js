@@ -19,7 +19,7 @@
  * THE SOFTWARE.
  */
 
-var store = (function(window){
+var store = function(window){
 	var store = {},
 		win = window,
 		doc = win.document,
